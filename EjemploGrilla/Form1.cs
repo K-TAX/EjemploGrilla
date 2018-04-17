@@ -46,7 +46,7 @@ namespace EjemploGrilla
             //grilla se añaden las columnas, por meido de un arreglo
             //haciendo uso de DAtagRidViewColumn[]
 
-            dataGridView1.Columns.AddRange(
+            dgvAlumnos.Columns.AddRange(
                 new System.Windows.Forms.DataGridViewColumn[] {
                     nombre,     //Columna 0
                     apellido,   //Columna 1
@@ -56,18 +56,18 @@ namespace EjemploGrilla
 
             // Propiedades a cada columna
             //accediendo por su indice ( comienza desde cero )
-            dataGridView1.Columns[0].Name = "Nombre";
-            dataGridView1.Columns[0].Width = 250;
-            dataGridView1.Columns[0].HeaderText = "Nombre Alumno";
+            dgvAlumnos.Columns[0].Name = "Nombre";
+            dgvAlumnos.Columns[0].Width = 250;
+            dgvAlumnos.Columns[0].HeaderText = "Nombre Alumno";
 
 
-            dataGridView1.Columns[1].Name = "Apellido";
-            dataGridView1.Columns[1].Width = 250;
-            dataGridView1.Columns[1].HeaderText = "Apellido Alumno";
+            dgvAlumnos.Columns[1].Name = "Apellido";
+            dgvAlumnos.Columns[1].Width = 250;
+            dgvAlumnos.Columns[1].HeaderText = "Apellido Alumno";
 
-            dataGridView1.Columns[2].Name = "Curso";
-            dataGridView1.Columns[2].Width = 150;
-            dataGridView1.Columns[2].HeaderText = "Curso Alumno";
+            dgvAlumnos.Columns[2].Name = "Curso";
+            dgvAlumnos.Columns[2].Width = 150;
+            dgvAlumnos.Columns[2].HeaderText = "Curso Alumno";
 
         }
 
@@ -91,7 +91,7 @@ namespace EjemploGrilla
 
                 //add recibe un objeto string[] 
                 //que en este caso es alumno ( por cada vuelta )
-                dataGridView1.Rows.Add( elAlumno );
+                dgvAlumnos.Rows.Add( elAlumno );
 
             }
             
@@ -149,7 +149,7 @@ namespace EjemploGrilla
 
                 //la variable nombre, almacenara el registro o valor
                  //que este en la celda cero de la fila cliqueada
-                string nombre = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string nombre = dgvAlumnos.Rows[e.RowIndex].Cells[0].Value.ToString();
 
                 //el valor de la variable nombre
                 //lo asignamos a la caja de texto txtNombre.Text
